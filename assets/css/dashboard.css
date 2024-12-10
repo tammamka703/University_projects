@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist+Mono:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Geist+Mono:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4,h5,h6,p,article{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:500;
+    font-style: normal;
+    color: #334eac;
+    transition: all .3s;
+    cursor: pointer;
+}
+h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover,p:hover,article:hover{
+    color: #081f5c;
+}
+
+button,a{
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #334eac;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+button:hover,a:hover{
+    color: #081f5c;
+    cursor: pointer;
+}
+section{
+    width:100%;
+    min-height: 100vh;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section .content{
+    width:100%;
+    height: 100%;
+    z-index: 3;
+}
+section::after{
+    content: "";
+    width: 100%;
+    height:100%;
+    position: absolute;
+    background-color: #fff9f069;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.under_lined{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding-block: .5rem;
+}
+.under_lined::after{
+    content:"";
+    width:0px;
+    height:2px;
+    background-color: #081f5c;
+    transition: all .5s;
+}
+.under_lined:hover::after{
+    width:100%;
+}
+
+
+
+/* section heading */
+.sec_heading{
+    width:100%;
+    height:200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 2rem;
+}
+.sec_heading > h1{
+    font-size: 4rem;
+    text-align:left;
+    margin-bottom: 1rem;
+}
+
+/* section footer */
+
+.sec_footer{
+    width:100%;
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sec_footer > h3{
+    font-size: 1.2rem;
+    display: inline;
+}
+.sec_footer > h3 >span{
+    font-size: 1.5rem;
+    color: red;
+}
+
+
+
+/* section seprator */
+
+.section_sep{
+    width:100%;
+    height:200px;
+    background-color: #d0e3ff;
+}
+/* cards and containers */
+.card_container{
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap:2rem;
+    flex-wrap: wrap;
+    padding-block: 2rem;
+}
+
+
+
+.card{
+    width:500px;
+    min-height:300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:transparent;
+    border-radius: 1rem;
+    border: solid 1px #334eac;
+    transition: all .3s;
+    background-color: #ffffff69;
+    backdrop-filter: blur(10px);
+    padding-block: 1rem;
+}
+.card:hover{
+    border:solid 1px #081f5c;
+    box-shadow: 0 0 5px #333;
+}
+.card_head{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card_head >*{
+    width:100%
+    
+}
+.card_body{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+}
+.card_body >*{
+    width:100%
+}
+
+.card_body ul{
+    list-style: none;
+}
+
+
+.card_footer{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:1rem;
+    padding-bottom:.5rem;
+}
+
+.card_footer >a{
+    width:80%;
+    padding-block: .5rem;
+    text-align: center;
+    background-color: transparent;
+    border-radius: .2rem;
+    border:solid 2px #334eac;
+    text-align: center;
+}
+
+.card_footer >a:hover{
+    border:solid 2px #081f5c;
+}
+
+
+
+
+
+/* requests section */
+
+.requests_sec{
+    background-image: url(../images/requests.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/* customers section */
+
+.customers_sec{
+    background-image: url(../images/customers.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* devices section */
+.device_sec{
+    background-image: url(../images/devices.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* employee sec */
+.employee_sec{
+    background-image: url(../images/employee.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.employee_sec .card{
+    min-height: 300px
+}
+
+
