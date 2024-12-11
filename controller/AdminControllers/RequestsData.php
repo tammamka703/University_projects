@@ -14,10 +14,8 @@ foreach ($data as $row) {
 
     echo '
     <div class="card">
-        <div class="card_head">
-            <h3>Request</h3>
-        </div>
         <div class="card_body">
+            <h3>Request</h3>
             <ul>
                 <li>
                     <h4 class="under_lined">Name: ' . $full_name . '</h4>
