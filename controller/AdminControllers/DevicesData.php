@@ -28,10 +28,8 @@ foreach ($data as $row) {
     $full_name = $row['first_name']. " " .$row['last_name'];
     echo '
     <div class="card">
-        <div class="card_header">
-            <h3>Device</h3>
-        </div>
         <div class="card_body">
+            <h3>Device</h3>
             <ul>
                 <li>
                     <h4 class="under_lined">Customer Name: ' . $full_name . '</h4>
